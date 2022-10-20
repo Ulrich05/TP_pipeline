@@ -1,4 +1,4 @@
- FROM openjdk:11
-    ADD target/jenkins-pipeline-example.jar jenkins-pipeline-example.jar
+ FROM openjdk:13
+    ADD target /tmp
+    WORKDIR /tmp
     ENTRYPOINT ["java", "-jar","jenkins-pipeline-example.jar"]
-    EXPOSE 1601
